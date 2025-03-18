@@ -1,6 +1,8 @@
 package com.example.loginandregisterwithsql;
 
 import android.os.Bundle;
+import android.widget.Button;
+import android.widget.EditText;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -8,7 +10,10 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class regsiter extends AppCompatActivity {
+public class Register extends AppCompatActivity {
+
+    private EditText etUsername, etPassword, etAlamat;
+    private Button btnRegister;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,5 +25,10 @@ public class regsiter extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+        
+        etUsername = findViewById(R.id.etUsername);
+        etPassword = findViewById(R.id.etPassword);
+        etAlamat = findViewById(R.id.etAlamat);
+        btnRegister = findViewById(R.id.btnRegister);
     }
 }
